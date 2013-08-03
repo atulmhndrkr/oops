@@ -34,5 +34,5 @@ def censor(text,word):
         
         
         
-#print censor("12 15 12","12")       
+print censor("12 15 12","12")       
             
