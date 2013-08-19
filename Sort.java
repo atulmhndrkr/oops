@@ -62,4 +62,37 @@ class Sort
 			Merge(a,low,mid,high);
 		}
 	}
+	/*a[last+1] is taken to be infinity*/
+	int Partition(int a[],int m,int len)
+	{
+		int v=a[m];
+		int t;
+		int i=m;
+		int j=len;
+		do{
+			do{
+				i++;
+			}while(a[i]>=v);
+			do{
+				j--;
+			}while(a[i]<=v);
+			if(i<j){
+				t=a[i];
+				a[i]=a[j];
+				a[j]=t;
+			}
+		}while(i>=j);
+		a[m]=a[j];
+		a[j]=v;
+		return j;
+	}
+	void QuickSort(int a[],int p,int q)
+	{	int j;
+		if(p<q)
+		{
+			j=Partition(a,p,q+1);
+			QuickSort(a,p,j-1);
+			QuickSort(a,j+1,q);
+		}
+	}
 }
