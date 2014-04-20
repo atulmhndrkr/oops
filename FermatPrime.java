@@ -6,7 +6,7 @@ class FermatPrime
 	{
 		System.out.println("Enter the number");
 		BufferedReader buff=new BufferedReader(new InputStreamReader(System.in));
-		int n=Integer.parseInt(buff.readLine());
+		long n=Integer.parseInt(buff.readLine());
 		if(n==561||n==1105)							//Removing Carmichael number
 		{	System.out.println("Number is composite");
 			return;
