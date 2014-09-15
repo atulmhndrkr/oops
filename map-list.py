@@ -31,4 +31,4 @@ def get_average(student):
     for i in student:
         return 0.1*average(i["homework"])+0.3*average(i["quizzes"])+0.6*average(i["tests"])
     
-get_average(student)    
+print get_average(student)    
