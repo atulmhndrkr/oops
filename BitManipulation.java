@@ -1,5 +1,5 @@
 import java.io.*;
-class DivBit
+class BitManipulation
 {
 	public static void main(String args[])throws IOException
 	{
@@ -7,6 +7,8 @@ class DivBit
 		System.out.println("Enter value of n");
 		int n=Integer.parseInt(buff.readLine());
 		n=n>>1;
+		System.out.println(n);
+		n=n<<1;
 		System.out.println(n);
 	}
 }
