@@ -1,7 +1,6 @@
 #include <iostream>
 #include<vector>
 using namespace std;
-
 vector<int> KMP(string S, string K)
 {
         vector<int> T(K.size() + 1, -1);
@@ -32,10 +31,12 @@ vector<int> KMP(string S, string K)
 	return matches;
 }
 
-int main() {
 
+int main() {
 	vector<int> matches=KMP("yuyiuABCyiuyiuyABC","ABC");
 	for(int i=0;i<matches.size();i++)
 		cout<<matches[i]<<endl;
 	return 0;
 }
+
+
